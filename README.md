@@ -12,7 +12,7 @@ Super simple ecommerce for ordering pizza
 ### How do I get set up? ###
 
 ```
-git clone https://axhemshahaj@bitbucket.org/axhemshahaj/yummy.git
+git clone https://github.com/axhem/yummy.git
 cd yummy
 npm i
 ```
