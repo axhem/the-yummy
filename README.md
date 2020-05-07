@@ -1,6 +1,6 @@
 # README #
 
-Super simple eccomerece for ordering pizza 
+Super simple ecommerce for ordering pizza 
 
 
 ### What is this repository for? ###
