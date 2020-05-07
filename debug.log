@@ -1,0 +1,80 @@
+[0506/194111.541:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.541:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.541:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.642:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.642:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.642:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.755:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.755:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194111.755:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194112.215:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/194258.740:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff728650000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.741:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[0506/194258.741:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe7d20000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.741:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\ntdll.dll
+[0506/194258.741:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe7bc0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.741:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNEL32.DLL
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe4d20000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\KERNELBASE.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffbfb80000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\81.0.4044.129\chrome_elf.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffdb810000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\VERSION.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe78f0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\msvcrt.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe5ab0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\bcryptPrimitives.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe7b10000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\ADVAPI32.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe7a70000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\sechost.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe7360000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\RPCRT4.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffa7000000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.742:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\81.0.4044.129\chrome.dll
+[0506/194258.742:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe6ea0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\WS2_32.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe6dd0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\OLEAUT32.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe5b30000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\msvcp_win.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe5780000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\ucrtbase.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe6790000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\combase.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe5bd0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\WINTRUST.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe4c10000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\MSASN1.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe5930000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\CRYPT32.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe4100000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffdb370000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.743:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\WINMM.dll
+[0506/194258.743:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffd3530000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.744:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\Secur32.dll
+[0506/194258.744:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe4ad0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.744:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\USERENV.dll
+[0506/194258.744:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffe4c80000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.744:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\System32\profapi.dll
+[0506/194258.744:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fffc74b0000 of 64 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0506/194258.744:WARNING:pe_image_reader.cc(340)] could not read dos header from C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL
+[0506/201035.464:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.578:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.578:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.696:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.697:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.799:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/201035.799:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0506/203043.363:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)

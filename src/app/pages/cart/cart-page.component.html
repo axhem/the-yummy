@@ -1,0 +1,264 @@
+<div class="cart-page-container">
+  <div class="cart-page-header">
+    <h1>Shopping Cart</h1>
+  </div>
+  <div class="cart-page-content" *ngIf="cartList.length > 0">
+    <div class="cart-item-header cart-item-row">
+      <div class="cart-item-cell cart-item-product"><span>Product</span></div>
+      <div class="cart-item-cell cart-item-quantity"><span>Quantity</span></div>
+      <div class="cart-item-cell cart-item-total"><span>Total</span></div>
+      <div class="cart-item-cell cart-item-action"><span>Action</span></div>
+    </div>
+    <div class="cart-item-row" *ngFor="let cart of cartList; let i = index">
+      <div class="cart-item-cell cart-item-product">
+        <div
+          class="cart-item-thumbnail"
+          [ngStyle]="{
+            'background-image': 'url(' + image_url + cart.product.image + ')'
+          }"
+        ></div>
+        <div class="cart-item-info">
+          <div class="cart-item-brand">Pizza</div>
+          <div class="cart-item-title">{{ cart.product.name }}</div>
+        </div>
+      </div>
+      <div class="cart-item-cell cart-item-quantity">
+        <quantity-control
+          [quantity]="cart.quantity"
+          (onChange)="changeQuantity(cart, $event)"
+        ></quantity-control>
+      </div>
+      <div class="cart-item-cell cart-item-total">
+        <div class="item-price">
+          {{ cart.quantity * cart.product.price | currency: "USD":true }}
+        </div>
+      </div>
+      <div class="cart-item-cell cart-item-action">
+        <div class="item-remove" (click)="removeFromCart(i)">X</div>
+      </div>
+    </div>
+    <div class="row cart-total">
+      <div class="col-lg-offset-6">
+        <div class="cart-total-row row">
+          <div class="col-md-6 cart-total-label">
+            Cart overview
+          </div>
+          <div class="col-md-6 cart-total-value"></div>
+        </div>
+        <div class="cart-total-row row">
+          <div class="col-md-6 cart-total-label">
+            subtotal
+          </div>
+          <div class="col-md-6 cart-total-value">
+            {{ totalPrice | currency: "USD":true }}
+          </div>
+        </div>
+        <div class="cart-total-row row">
+          <div class="col-md-6 cart-total-label">
+            delivery cost
+          </div>
+          <div class="col-md-6 cart-total-value">
+            {{ deliveryCost | currency: "USD":true }}
+          </div>
+        </div>
+        <div class="cart-total-row row">
+          <div class="col-md-6 cart-total-label">
+            total
+          </div>
+          <div class="col-md-6 cart-total-value cart-total-price">
+            {{ totalPrice + deliveryCost | currency: "USD":true }} /{{ totalPrice + deliveryCost |convert | currency: "EUR ":true }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-buttons">
+      <div class="continue-shopping">
+        <a routerLink="/">continue shopping</a>
+      </div>
+      <div
+        data-toggle="modal"
+        data-target="#myModal"
+        (click)="showModal = true"
+        class="checkout-button button button-primary button-large"
+      >
+        Checkout
+      </div>
+    </div>
+  </div>
+  <div class="cart-page-content" *ngIf="cartList.length == 0">
+    <h4>Your cart is empty.</h4>
+    <a routerLink="/">Go shopping</a>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal" [ngClass]="{ show: showModal }">
+    <div class="modal-dialog modal-lg" style="margin-top: 6%;">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Checkout</h4>
+          <button
+            type="button"
+            class="close"
+            (click)="showModal = false"
+            data-dismiss="modal"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" style="width: 60%;">
+          <form [formGroup]="paymentFormGroup" (ngSubmit)="onCheckout(cartList)">
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Name"
+                formControlName="fullname"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('fullname').valid &&
+                  paymentFormGroup.get('fullname').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Name is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="email"
+                placeholder="Email"
+                formControlName="email"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('email').valid &&
+                  paymentFormGroup.get('email').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Email is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Address"
+                formControlName="address"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('address').valid &&
+                  paymentFormGroup.get('address').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Address is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="City"
+                formControlName="city"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('city').valid &&
+                  paymentFormGroup.get('city').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                City is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Post code"
+                formControlName="postal_code"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('postal_code').valid &&
+                  paymentFormGroup.get('postal_code').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Post code is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Country"
+                formControlName="country"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('country').valid &&
+                  paymentFormGroup.get('country').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Country is required
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Phone"
+                formControlName="phone"
+              />
+              <div
+                class="error-required"
+                *ngIf="
+                  !paymentFormGroup.get('phone').valid &&
+                  paymentFormGroup.get('phone').touched
+                "
+              >
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i>
+                Phone is required
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg"
+              type="submit"
+              [disabled]="!paymentFormGroup.valid"
+            >
+              Confirm Checkout
+            </button>
+          </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="showModal = false"
+            data-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
