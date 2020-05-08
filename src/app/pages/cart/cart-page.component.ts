@@ -32,7 +32,7 @@ export class CartPageComponent extends CartBaseComponent {
     protected cartService: CartService,
     protected checkoutService: CheckoutService,
     private formBuilder: FormBuilder,
-    private router: Router
+    public router: Router
   ) {
     super(cartService);
   }
@@ -71,24 +71,25 @@ export class CartPageComponent extends CartBaseComponent {
     };
     this.checkoutService.checkout(body, cart).subscribe({
       next(resp) {
-        this.onResponse("success", "", resp.message);
-
-        this.router.navigate(["/category"]);
+        Swal.fire({
+          position: "top-right",
+          type: "success",
+          title: "",
+          text: resp.message,
+          showConfirmButton: false,
+          timer: 2500,
+        });
       },
       error(err) {
-        this.onResponse("error", "", err.message);
+        Swal.fire({
+          position: "top-right",
+          type: "error",
+          title: "",
+          text: err.message,
+          showConfirmButton: false,
+          timer: 2500,
+        });
       },
-    });
-  }
-  // //implementing sweet alert
-  onResponse(type, title, message) {
-    Swal.fire({
-      position: "top-right",
-      type: type,
-      title: title,
-      text: message,
-      showConfirmButton: false,
-      timer: 2500,
     });
   }
 }
