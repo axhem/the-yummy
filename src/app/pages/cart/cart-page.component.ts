@@ -60,36 +60,36 @@ export class CartPageComponent extends CartBaseComponent {
 
   //checkout
   onCheckout(cart) {
+    let _this = this;
     const body = {
-      name: this.paymentFormGroup.value.fullname,
-      email: this.paymentFormGroup.value.email,
-      address: this.paymentFormGroup.value.address,
-      city: this.paymentFormGroup.value.city,
-      postal_code: this.paymentFormGroup.value.postal_code,
-      country: this.paymentFormGroup.value.country,
-      phone: this.paymentFormGroup.value.phone,
+      name: _this.paymentFormGroup.value.fullname,
+      email: _this.paymentFormGroup.value.email,
+      address: _this.paymentFormGroup.value.address,
+      city: _this.paymentFormGroup.value.city,
+      postal_code: _this.paymentFormGroup.value.postal_code,
+      country: _this.paymentFormGroup.value.country,
+      phone: _this.paymentFormGroup.value.phone,
     };
     this.checkoutService.checkout(body, cart).subscribe({
       next(resp) {
-        Swal.fire({
-          position: "top-right",
-          type: "success",
-          title: "",
-          text: resp.message,
-          showConfirmButton: false,
-          timer: 2500,
-        });
+        _this.onResponse("success", "", resp.message);
+        _this.router.navigate(['category']);
       },
       error(err) {
-        Swal.fire({
-          position: "top-right",
-          type: "error",
-          title: "",
-          text: err.message,
-          showConfirmButton: false,
-          timer: 2500,
-        });
+        _this.onResponse("error", "", err.message);
       },
     });
   }
+
+  onResponse(type, title, message) {
+    Swal.fire({
+      position: 'top-right',
+      type: type,
+      title: title,
+      text: message,
+      showConfirmButton: false,
+      timer: 2500
+    });
+  }
+
 }
