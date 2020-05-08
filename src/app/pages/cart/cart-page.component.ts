@@ -2,14 +2,16 @@ import { Component } from "@angular/core";
 import { CartBaseComponent } from "./cart-base.component";
 import { CartService } from "../../services/cart.service";
 import { CheckoutService } from "../../services/checkout.service";
-
 import { environment } from "../../../environments/environment";
+import Swal from "sweetalert2";
+
 import {
   FormGroup,
   FormBuilder,
   Validators,
   FormControl,
 } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-cart-page",
@@ -29,7 +31,8 @@ export class CartPageComponent extends CartBaseComponent {
   constructor(
     protected cartService: CartService,
     protected checkoutService: CheckoutService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     super(cartService);
   }
@@ -68,11 +71,24 @@ export class CartPageComponent extends CartBaseComponent {
     };
     this.checkoutService.checkout(body, cart).subscribe({
       next(resp) {
-        console.log(resp);
+        this.onResponse("success", "", resp.message);
+
+        this.router.navigate(["/category"]);
       },
       error(err) {
-        console.log(err);
+        this.onResponse("error", "", err.message);
       },
+    });
+  }
+  // //implementing sweet alert
+  onResponse(type, title, message) {
+    Swal.fire({
+      position: "top-right",
+      type: type,
+      title: title,
+      text: message,
+      showConfirmButton: false,
+      timer: 2500,
     });
   }
 }
