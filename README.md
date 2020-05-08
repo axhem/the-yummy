@@ -12,6 +12,7 @@ Super simple ecommerce for ordering pizza
 ### How do I get set up? ###
 
 ```
+npm i -g @angular/cli@7.3.1
 git clone https://github.com/axhem/yummy.git
 cd yummy
 npm i
@@ -25,16 +26,20 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-#### Units to be tested
+Run `ng test`  in the root to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Minor  Unit testing
+1. Convert Pipe
+    * Convert an instance
 1. Category Page
-    * test shopping cart, add a duplicate item should increment the quantity.
+    * test shopping cart, add a duplicate item should increment the quantity for that item.
+    * test shopping cart, add a multiple products item should increment the quantity for that item.
 2. Product Page, test add to cart button
-    * Add first item.
-    * Testing when quantity is null or empty.
     * Add duplicate item.
+    * Add first item.
+    * When quantity is null.
 3. Cart Page
     * change quantity.
     * remove item.
+
 ## Running end-to-end tests
 
