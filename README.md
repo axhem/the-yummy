@@ -14,7 +14,7 @@ Super simple ecommerce for ordering pizza
 ```
 npm i -g @angular/cli@7.3.1
 git clone https://github.com/axhem/yummy.git
-cd yummy
+cd yummy/
 npm i
 ng serve
 ```
